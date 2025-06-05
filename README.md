@@ -1,5 +1,5 @@
 
-KNN Classifier with KD-Tree for MNIST Dataset
+#KNN Classifier with KD-Tree for MNIST Dataset
 
 This project implements a K-Nearest Neighbors (KNN) classifier using a KD-Tree for efficient nearest neighbor search, applied to the MNIST handwritten digit dataset. The code, written entirely in C++, achieves an impressive 91% accuracy on the test set without relying on external machine learning libraries.
 
