@@ -1,28 +1,37 @@
-KNN Classifier Project
 
-Overview
+KNN Classifier with KD-Tree for MNIST Dataset
 
-This project implements a K-Nearest Neighbors (KNN) classifier, utilizing a K-D Tree data structure for efficient nearest neighbor searches. The classifier is designed to perform classification tasks on a dataset, achieving an accuracy of 91% on the test set. The project is written in Python and leverages libraries such as scikit-learn for machine learning and NumPy for numerical computations.
-
-Features
+This project implements a K-Nearest Neighbors (KNN) classifier using a KD-Tree for efficient nearest neighbor search, applied to the MNIST handwritten digit dataset. The code, written entirely in C++, achieves an impressive 91% accuracy on the test set without relying on external machine learning libraries.
 
 
+## Features
 
-
-
-KNN Classifier: Implements the K-Nearest Neighbors algorithm for classification.
+- KD-Tree Implementation: A custom-built KD-Tree organizes the training data, enabling fast nearest neighbor queries.
 
 
 
-K-D Tree Optimization: Uses a K-D Tree to optimize the search for nearest neighbors, improving computational efficiency.
+- KNN Classifier: Uses the KD-Tree to efficiently locate k nearest neighbors and predicts classes via majority voting.
 
 
 
-High Accuracy: Achieves 91% accuracy on the test dataset, demonstrating robust performance for classification tasks.
+- MNIST Dataset Support: Handles loading and preprocessing of the MNIST dataset seamlessly.
 
 
 
-Modular Code: Organized and reusable codebase, suitable for experimentation with different datasets or parameters.
+- High Accuracy: Achieves 91% accuracy on the MNIST test set with k=3.
+
+
+
+- Pure C++: Fully implemented in C++ using only standard libraries, ensuring portability and lightweight performance.
+
+
+## Overview
+
+The KNN algorithm classifies data points by assigning them the majority class among their k nearest neighbors. While effective, this process can be slow for large datasets due to the computational cost of finding nearest neighbors. To improve efficiency, this project employs a KD-Tree, a space-partitioning data structure that accelerates nearest neighbor searches.
+
+The implementation builds a KD-Tree from the MNIST training data and uses it to classify the test data. The MNIST dataset includes 60,000 training images and 10,000 test images of handwritten digits (0-9), each represented as a 28x28 pixel grid, flattened into a 784-dimensional vector.
+
+
 ![KD](https://github.com/user-attachments/assets/cd20e238-095b-47f1-a3f4-6beaac93ed51)
 ![MNIST](https://github.com/user-attachments/assets/59fe27c2-3140-4d35-b0c0-db670db7fa95)
 ![knn](https://github.com/user-attachments/assets/f521f5b1-516f-4b07-ae6d-66cdacb89879)
